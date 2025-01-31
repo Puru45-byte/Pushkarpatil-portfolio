@@ -1390,7 +1390,7 @@ Start FunFacts CSS
 	object-fit: cover;
 	width: 400px;
 	height: 400px;
-
+	left: auto;
 }
 
 .banner-images img:hover {
@@ -1398,20 +1398,10 @@ Start FunFacts CSS
 }
 
 @media (max-width: 768px) {
-	.banner-images {
-		justify-content: center;
-	}
-
-	.banner-images img {
-		max-width: 300px;
-	}
-}
-
-@media (max-width: 480px) {
-    /* Ensures the image moves to the top */
+    /* Moves the image above text */
     .row {
         display: flex;
-        flex-direction: column-reverse; /* Moves the image above text */
+        flex-direction: column-reverse;
     }
 
     .banner-images {
@@ -1423,16 +1413,48 @@ Start FunFacts CSS
     }
 
     .banner-images img {
-		left: auto;
         width: 100%;
-        max-width: 400px;
+        max-width: 400px; /* Keep consistent with 480px */
         height: 400px;
         border-radius: 50%;
     }
 
     .banner_content {
-        text-align: center; /* Centers the text */
+        text-align: center;
     }
+}
+
+
+@media (max-width: 480px) {
+
+	/* Ensures the image moves to the top */
+	.row {
+		display: flex;
+		flex-direction: column-reverse;
+		/* Moves the image above text */
+	}
+
+	.banner-images {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 15px;
+		order: -1;
+		/* Moves the image above text */
+	}
+
+	.banner-images img {
+		left: auto;
+		width: 100%;
+		max-width: 400px;
+		height: 400px;
+		border-radius: 50%;
+	}
+
+	.banner_content {
+		text-align: center;
+		/* Centers the text */
+	}
 }
 
 
