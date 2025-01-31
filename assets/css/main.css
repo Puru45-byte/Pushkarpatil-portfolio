@@ -820,7 +820,7 @@ a.back-to-top:focus {
 .services-item .services-content h3 {
 	margin-top: 10px;
 	margin-bottom: 10px;
-	
+
 }
 
 
@@ -1408,10 +1408,34 @@ Start FunFacts CSS
 }
 
 @media (max-width: 480px) {
-	.banner-images img {
-		max-width: 100%;
-	}
+    /* Ensures the image moves to the top */
+    .row {
+        display: flex;
+        flex-direction: column-reverse; /* Moves the image above text */
+    }
+
+    .banner-images {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 15px;
+        order: -1; /* Moves the image above text */
+    }
+
+    .banner-images img {
+		left: auto;
+        width: 100%;
+        max-width: 400px;
+        height: 400px;
+        border-radius: 50%;
+    }
+
+    .banner_content {
+        text-align: center; /* Centers the text */
+    }
 }
+
+
 
 
 
@@ -1569,43 +1593,42 @@ Start FunFacts CSS
 .row {
 	display: flex;
 	flex-wrap: wrap;
-  }
-  
-  /* Make all columns equal height */
-  .col-lg-4, .col-md-4, .col-xs-12 {
+}
+
+/* Make all columns equal height */
+.col-lg-4,
+.col-md-4,
+.col-xs-12 {
 	display: flex;
 	flex-direction: column;
-  }
-  
-  /* Ensure the single_blog class fills the height of its parent */
-  .single_blog {
+}
+
+/* Ensure the single_blog class fills the height of its parent */
+.single_blog {
 	flex: 1;
 	display: flex;
 	flex-direction: column;
-  }
-  
-  /* Style the blog-thumb to maintain aspect ratio of images */
-  .blog-thumb {
+}
+
+/* Style the blog-thumb to maintain aspect ratio of images */
+.blog-thumb {
 	flex: 1;
 	display: flex;
 	flex-direction: column;
-  }
-  
-  .blog-image img {
+}
+
+.blog-image img {
 	width: 100%;
 	height: auto;
 	object-fit: cover;
-  }
-  
-  /* Style the blog-info to ensure proper spacing */
-  .blog-info {
+}
+
+/* Style the blog-info to ensure proper spacing */
+.blog-info {
 	padding: 15px;
 	background-color: #ffffff;
 	flex: 1;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-  }
-  
-  
-
+}
