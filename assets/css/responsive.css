@@ -1,0 +1,313 @@
+/* Optimized and Responsive CSS */
+:root {
+	--theme: rgb(247, 60, 119);
+	--background: #070706;
+	--color-fff: #fff;
+	--color-000: #000;
+}
+
+/* Default Styles */
+html, body {
+	overflow-x: hidden;
+	font-family: 'Poppins', sans-serif;
+	color: #333;
+	margin: 0;
+	padding: 0;
+	line-height: 1.6;
+	background-color: var(--background);
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+p {
+	margin: 0;
+	font-size: 15px;
+	color: var(--color-fff);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: var(--color-fff);
+	font-weight: 600;
+	margin: 0;
+}
+
+/* Buttons */
+.btn {
+	margin: 20px;
+	padding: 10px 22px;
+	border-radius: 30px;
+	background: var(--theme);
+	color: var(--color-fff);
+	cursor: pointer;
+	text-transform: capitalize;
+}
+
+/* Responsive Grid for Services */
+.services-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px;
+}
+
+.services-item {
+	height: auto;
+	background: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Prevent overflow */
+    transition: transform 0.3s ease;
+    color: #333;
+    justify-content: flex-start; /* Align items at the start */
+}
+
+.services-item:hover {
+	transform: translateY(-5px);
+}
+
+.services-item .icon {
+	flex: 0 0 auto;
+	margin-right: 10px; /* Reduced margin between icon and text */
+}
+
+.services-item .icon img {
+	width: 60px;
+	height: auto;
+}
+
+.services-content {
+	flex: 1;
+	text-align: left;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
+
+/* Prevent text overflow */
+.services-content h3 {
+	font-size: 20px;
+	margin-bottom: 5px;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	color: #333;
+	display: block;
+	line-height: 1.4;
+	white-space: normal; /* Allow text to wrap */
+	overflow: hidden; /* Prevent overflow */
+	text-overflow: ellipsis; /* Optionally truncate the text with an ellipsis */
+}
+
+.services-content h3 a {
+	display: inline;
+	word-break: break-word;
+	overflow-wrap: break-word;
+	white-space: normal;
+}
+
+.services-content h5 {
+	font-size: 16px;
+	color: #666;
+	margin-top: 5px;
+	display: block;
+}
+
+.services-content p {
+	line-height: 1.4;
+	color: #666;
+}
+
+/* Prevent text overflow and adjust layout */
+.services-content {
+	max-width: 100%;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	overflow: hidden; /* Ensure no overflow */
+	text-overflow: ellipsis; /* Optionally truncate text */
+}
+
+/* Prevent Overflow and Adjust Font Size in Skills Section */
+#Skills h1 {
+	padding-top: 2rem;
+	font-size: 1.5rem;
+	color: #41075c;
+	font-weight: bolder;
+	text-align: center;
+	padding-bottom: 1.5rem;
+	border: 20px solid #c4c126;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
+
+#Skills h3 {
+	white-space: normal;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* Skills Section - Responsive Fixes */
+#Skills {
+	padding: 2rem;
+}
+
+#Skills h1 {
+	font-size: 2rem;
+	text-align: center;
+}
+
+.skill-category {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 15px;
+	min-height: 150px;  /* Minimum height for each skill box */
+	overflow: hidden;   /* Prevent content overflow */
+}
+
+.skill-category .skill-box {
+	min-height: 150px;  /* Add a min height for each skill box */
+	padding: 20px;
+	overflow: hidden;   /* Ensure content stays within box */
+}
+
+.skill-category h3 {
+	font-size: 1.2rem;
+	text-align: center;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	white-space: normal;
+	overflow: hidden;
+	text-overflow: ellipsis; /* Optional */
+}
+
+@media (max-width: 768px) {
+	#Skills h1 {
+		font-size: 1.5rem;
+	}
+
+	.skill-category {
+		grid-template-columns: 1fr;
+	}
+
+	.skill-category h3 {
+		font-size: 1rem;
+		word-wrap: break-word;
+		overflow-wrap: break-word;
+		white-space: normal;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}
+
+@media (max-width: 450px) {
+	#Skills h1 {
+		font-size: 1.3rem;
+	}
+
+	.skill-category h3 {
+		font-size: 0.9rem;
+		word-wrap: break-word;
+		overflow-wrap: break-word;
+		white-space: normal;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}
+
+@media (max-width: 1199px) {
+	.services-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 991px) {
+	.services-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.services-content h3 {
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 767px) {
+	.services-grid {
+		grid-template-columns: 1fr;
+	}
+	.services-content h3 {
+		font-size: 16px;
+	}
+	.services-content h5 {
+		font-size: 14px;
+	}
+	.services-content p {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 768px) {
+	/* Grid Layout for Services Section */
+	.services-grid {
+		grid-template-columns: 1fr;
+	}
+
+	/* Service Content Text */
+	.services-content h3 {
+		font-size: 16px;
+	}
+
+	.services-content h5 {
+		font-size: 14px;
+	}
+
+	.services-content p {
+		font-size: 14px;
+	}
+
+	/* Adjust Skills Section */
+	#Skills h1 {
+		font-size: 1.5rem;
+	}
+
+	.skill-category {
+		grid-template-columns: 1fr; /* One column layout */
+	}
+
+	.skill-category h3 {
+		font-size: 1rem;
+		word-wrap: break-word;
+		overflow-wrap: break-word;
+		white-space: normal;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}
+
+@media (max-width: 450px) {
+	/* Skills Section Title */
+	#Skills h1 {
+		font-size: 1.3rem;
+	}
+
+	.skill-category h3 {
+		font-size: 0.9rem;
+		word-wrap: break-word;
+		overflow-wrap: break-word;
+		white-space: normal;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}
+
+@media (max-width: 600px) {
+    .services-item {
+        flex: 1 1 100%; /* Full width on mobile screens */
+    }
+
+    .services-content h3 {
+        font-size: 1.2em; /* Smaller font size for mobile screens */
+    }
+}
