@@ -1151,6 +1151,16 @@ Start FunFacts CSS
 /* ==========================================================================
 10. Start Contact Area
 ========================================================================== */
+@media (max-width: 480px) {
+	.form-control {
+		margin-top: 15px;
+	}
+}
+@media screen and (max-width: 768px) {
+	.form-control {
+		margin-top: 15px;
+	}
+}
 #contact {
 	position: relative;
 	overflow: hidden;
